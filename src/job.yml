@@ -10,6 +10,6 @@ inputs:
     path: "azureml:diabetes-dev-folder:1"
   reg_rate: 0.02
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
-compute: vczczvyhinstance
+compute: cpu-cluster
 experiment_name: "job-cli"
 description: "Run your job from the CLI and created with a YAML file"
