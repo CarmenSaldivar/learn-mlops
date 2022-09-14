@@ -15,8 +15,5 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{secrets.AZURE_CREDENTIALS}}
-      - name: Azure CLI Action
-        uses: Azure/cli@v1
-        with:
-          # Specify the script here
-          inlineScript: "az ml job create --file 'src/job.yml' --resource-group rg-mcsm-cus-jovd --workspace-name mlw-cs-dev"
+      - name: Install az ml extension
+        run: az ml job create --file 'src/job.yml' --resource-group rg-mcsm-cus-jovd --workspace-name mlw-cs-dev
